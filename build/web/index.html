@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Game Lobby Home</title>
+        <meta charset="UTF-8">
+        <script src="websocket.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1 style="text-align: center;">Game Lobby Home</h1>
+            <br />
+            <div id="addDevice">
+                <div class="button"> <a href="#" OnClick="showForm()">Add a Game</a> </div>
+                <form id="addDeviceForm">
+                    <h3>Add a new row</h3>
+                    <span>Name: <input type="text" name="name" id="name"></span>
+                    <span>Entry Fee: <input type="number" name="entryFee" id="entryFee"></span>
+                    <span>Game size: <input type="number" name="size" id="size"></span>
+
+                    <input type="button" class="button" value="Add" onclick=formSubmit()>
+                    <input type="reset" class="button" value="Cancel" onclick=hideForm()>
+                </form>
+            </div>
+            <br />
+            <h3 style="text-align: center;">Currently live games:</h3>
+            <div id="content"></div>
+            <div id="content1" class="table-wrapper" style="text-align: center;">
+                <table id="myTable" class="steelBlueCols">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Entry Fee</th>
+                        <th>Join Count</th>
+                        <th>Capacity</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
